@@ -21,3 +21,8 @@ body {
 .quizz-card {
   width: 30rem;
 }
+
+.quizz-answer:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+}
