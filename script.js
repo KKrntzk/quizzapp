@@ -75,4 +75,16 @@ function showCurrentQuestion() {
   document.getElementById("answer_4").innerHTML = question["answer_4"];
 }
 
-function answer(answer_x) {}
+function answer(answer_x) {
+  let question = questions[currentQuestion];
+  console.log("Selected answer is", answer_x);
+  let selectedQuestionNumber = answer_x.slice(-1);
+  console.log("selectedQuestionNumber is", selectedQuestionNumber);
+  console.log("Current question is", question["right_answer"]);
+
+  if (selectedQuestionNumber == question["right_answer"]) {
+    console.log("Richtige Antwort!!");
+  } else {
+    console.log("Falsche Antwort");
+  }
+}
