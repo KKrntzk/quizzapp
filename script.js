@@ -77,14 +77,16 @@ function showCurrentQuestion() {
 
 function answer(answer_x) {
   let question = questions[currentQuestion];
-  console.log("Selected answer is", answer_x);
   let selectedQuestionNumber = answer_x.slice(-1);
-  console.log("selectedQuestionNumber is", selectedQuestionNumber);
-  console.log("Current question is", question["right_answer"]);
+  let idOfRightAnswer = `answer_${question["right_answer"]}`;
 
   if (selectedQuestionNumber == question["right_answer"]) {
-    console.log("Richtige Antwort!!");
+    document.getElementById(answer_x).parentNode.classList.add("bg-success");
   } else {
-    console.log("Falsche Antwort");
+    document.getElementById(answer_x).parentNode.classList.add("bg-danger");
+    document
+      .getElementById(idOfRightAnswer)
+      .parentNode.classList.add("bg-success");
   }
+  document.getElementById("nextBtn").disabled = false;
 }
