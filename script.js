@@ -90,3 +90,21 @@ function answer(answer_x) {
   }
   document.getElementById("nextBtn").disabled = false;
 }
+
+function nextQuestion() {
+  currentQuestion++;
+  document.getElementById("nextBtn").disabled = true;
+  resetAnswerButtons();
+  showCurrentQuestion();
+}
+
+function resetAnswerButtons() {
+  document.getElementById("answer_1").parentNode.classList.remove("bg_danger");
+  document.getElementById("answer_1").parentNode.classList.remove("bg_success");
+  document.getElementById("answer_2").parentNode.classList.remove("bg_danger");
+  document.getElementById("answer_2").parentNode.classList.remove("bg_success");
+  document.getElementById("answer_3").parentNode.classList.remove("bg_danger");
+  document.getElementById("answer_3").parentNode.classList.remove("bg_success");
+  document.getElementById("answer_4").parentNode.classList.remove("bg_danger");
+  document.getElementById("answer_4").parentNode.classList.remove("bg_success");
+}

@@ -27,7 +27,7 @@ body {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.bg-success,
-.bg-danger {
+.bg_success,
+.bg_danger {
   color: white;
 }
